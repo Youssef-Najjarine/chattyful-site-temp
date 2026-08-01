@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChattyFul · Talk to someone who gets it</title>
+  <meta name="description" content="ChattyFul is a peer-support chat app where people who need to talk are matched in real time with people offering to help. Operated by Happy World LLC.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #FBF7F4;
+      --ink: #232323;
+      --ink-soft: rgba(35, 35, 35, 0.62);
+      --brand: #ED5370;
+      --brand-tint: #FCE9ED;
+      --bubble-neutral: #FFFFFF;
+      --line: rgba(35, 35, 35, 0.12);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Karla', 'Segoe UI', sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header.hero {
+      padding: 88px 0 56px;
+      text-align: center;
+    }
+
+    .wordmark {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.6rem, 8vw, 3.6rem);
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .wordmark .ful { color: var(--brand); }
+
+    .tagline {
+      margin-top: 14px;
+      font-size: 1.15rem;
+      color: var(--ink-soft);
+    }
+
+    .chat {
+      margin: 48px auto 0;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-align: left;
+    }
+
+    .bubble {
+      padding: 13px 18px;
+      border-radius: 20px;
+      max-width: 82%;
+      font-size: 1rem;
+      line-height: 1.45;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: arrive 0.5s ease-out forwards;
+    }
+
+    .bubble.them {
+      background: var(--bubble-neutral);
+      border: 1px solid var(--line);
+      border-bottom-left-radius: 6px;
+      align-self: flex-start;
+      animation-delay: 0.2s;
+    }
+
+    .bubble.you {
+      background: var(--brand);
+      color: #fff;
+      border-bottom-right-radius: 6px;
+      align-self: flex-end;
+      animation-delay: 0.9s;
+    }
+
+    @keyframes arrive {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bubble { animation: none; opacity: 1; transform: none; }
+    }
+
+    main { padding-bottom: 24px; }
+
+    section { padding: 40px 0; border-top: 1px solid var(--line); }
+
+    h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 500;
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+    }
+
+    p + p { margin-top: 12px; }
+
+    .muted { color: var(--ink-soft); }
+
+    .notice {
+      background: var(--brand-tint);
+      border-radius: 14px;
+      padding: 22px 24px;
+      font-size: 0.98rem;
+    }
+
+    .notice strong { color: var(--brand); }
+
+    a.mail {
+      display: inline-block;
+      margin-top: 6px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--brand);
+      text-decoration: none;
+      border-bottom: 2px solid var(--brand-tint);
+      padding-bottom: 2px;
+    }
+
+    a.mail:hover, a.mail:focus-visible { border-bottom-color: var(--brand); }
+
+    a:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0 44px;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="hero">
+      <div class="wordmark">Chatty<span class="ful">Ful</span></div>
+      <p class="tagline">Talk to someone who gets it, right when you need to.</p>
+      <div class="chat" aria-hidden="true">
+        <div class="bubble them">I just need someone to talk to.</div>
+        <div class="bubble you">I'm here. What's going on?</div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>What ChattyFul is</h2>
+        <p>ChattyFul is a peer-support chat app. When you need to talk, it matches you in real time with someone offering to listen and help. When you have room to give, you can be that someone for another person. Around the matching sits everything you'd expect from a modern chat app: direct messages, group conversations, friends, and profiles.</p>
+        <p class="muted">The ChattyFul app for iOS is coming soon, with Android to follow.</p>
+      </section>
+
+      <section>
+        <h2>Messages from ChattyFul</h2>
+        <div class="notice">
+          <p><strong>Text messages:</strong> when you create a ChattyFul account with your phone number or update it later, we send a one-time verification code by SMS to that number. Codes arrive only when you request them. We do not send marketing texts. Message and data rates may apply.</p>
+          <p><strong>Email:</strong> account emails such as verification codes, password resets, and security alerts come from noreply@chattyful.com.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>Questions, feedback, or trouble with your account? We read everything.</p>
+        <a class="mail" href="mailto:support@chattyful.com">support@chattyful.com</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>ChattyFul is operated by Happy World LLC.</p>
+      <p>&copy; 2026 Happy World LLC. All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
