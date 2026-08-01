@@ -4,7 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChattyFul · Talk to someone who gets it</title>
-  <meta name="description" content="ChattyFul is a peer-support chat app where people who need to talk are matched in real time with people offering to help. Operated by Happy World LLC.">
+  <meta name="description" content="ChattyFul is a peer-support chat app that matches people who need to talk with people ready to listen, in real time. Operated by Happy World LLC.">
+  <meta property="og:title" content="ChattyFul">
+  <meta property="og:description" content="A peer-support chat app that matches people who need to talk with people ready to listen, in real time.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chattyful.com">
+  <meta name="theme-color" content="#FBF7F4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23ED5370' d='M32 6C17.6 6 6 16.7 6 30c0 7.6 3.9 14.4 10 18.8V58l10.3-5.4c1.8.4 3.7.6 5.7.6 14.4 0 26-10.7 26-24S46.4 6 32 6z'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
@@ -14,12 +20,17 @@
       --ink: #232323;
       --ink-soft: rgba(35, 35, 35, 0.62);
       --brand: #ED5370;
+      --brand-deep: #D13B58;
       --brand-tint: #FCE9ED;
-      --bubble-neutral: #FFFFFF;
-      --line: rgba(35, 35, 35, 0.12);
+      --card: #FFFFFF;
+      --line: rgba(35, 35, 35, 0.10);
+      --footer: #241A1F;
+      --shadow: 0 14px 40px rgba(35, 35, 35, 0.10);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
 
     body {
       background: var(--paper);
@@ -30,59 +41,193 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    .wrap {
-      max-width: 640px;
+    .inner {
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 28px;
     }
 
-    header.hero {
-      padding: 88px 0 56px;
-      text-align: center;
+    a:focus-visible {
+      outline: 3px solid var(--brand);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    /* ---------- Nav ---------- */
+
+    nav {
+      padding: 22px 0;
+    }
+
+    nav .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
     }
 
     .wordmark {
       font-family: 'Fraunces', Georgia, serif;
       font-weight: 600;
-      font-size: clamp(2.6rem, 8vw, 3.6rem);
+      font-size: 1.55rem;
       letter-spacing: -0.02em;
       color: var(--ink);
+      text-decoration: none;
     }
 
     .wordmark .ful { color: var(--brand); }
 
-    .tagline {
-      margin-top: 14px;
-      font-size: 1.15rem;
-      color: var(--ink-soft);
+    .nav-mail {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--ink);
+      text-decoration: none;
+      padding: 10px 18px;
+      border: 1.5px solid var(--line);
+      border-radius: 999px;
+      background: var(--card);
+      transition: border-color 0.2s ease, color 0.2s ease;
+      white-space: nowrap;
     }
 
-    .chat {
-      margin: 48px auto 0;
-      max-width: 420px;
+    .nav-mail:hover { border-color: var(--brand); color: var(--brand); }
+
+    /* ---------- Hero ---------- */
+
+    .hero .inner {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 48px;
+      padding-top: 48px;
+      padding-bottom: 104px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.5rem, 5vw, 3.9rem);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+      margin-bottom: 22px;
+    }
+
+    .lede {
+      font-size: 1.2rem;
+      color: var(--ink-soft);
+      max-width: 32em;
+      margin-bottom: 30px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .store-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 12px 22px;
+      border-radius: 999px;
+    }
+
+    .store-pill svg { width: 17px; height: 17px; }
+
+    .hero-note { font-size: 0.95rem; color: var(--ink-soft); }
+
+    /* ---------- Phone mockup ---------- */
+
+    .phone-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .phone-wrap::before {
+      content: "";
+      position: absolute;
+      inset: -8% -4%;
+      background: radial-gradient(closest-side, var(--brand-tint), transparent 72%);
+      z-index: 0;
+    }
+
+    .phone {
+      position: relative;
+      z-index: 1;
+      width: min(310px, 78vw);
+      border: 10px solid var(--footer);
+      border-radius: 44px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .phone-top {
+      background: var(--brand);
+      color: #fff;
+      padding: 20px 18px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .phone-top svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+    .phone-top .title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+    }
+
+    .screen {
+      padding: 18px 14px 22px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      text-align: left;
+      gap: 11px;
+      min-height: 360px;
+    }
+
+    .sys {
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--ink-soft);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
     }
 
     .bubble {
-      padding: 13px 18px;
-      border-radius: 20px;
-      max-width: 82%;
-      font-size: 1rem;
+      padding: 11px 15px;
+      border-radius: 18px;
+      max-width: 84%;
+      font-size: 0.92rem;
       line-height: 1.45;
       opacity: 0;
       transform: translateY(10px);
-      animation: arrive 0.5s ease-out forwards;
+      animation: arrive 0.45s ease-out forwards;
     }
 
     .bubble.them {
-      background: var(--bubble-neutral);
-      border: 1px solid var(--line);
+      background: #F4EEEA;
       border-bottom-left-radius: 6px;
       align-self: flex-start;
-      animation-delay: 0.2s;
     }
 
     .bubble.you {
@@ -90,104 +235,313 @@
       color: #fff;
       border-bottom-right-radius: 6px;
       align-self: flex-end;
-      animation-delay: 0.9s;
     }
 
-    @keyframes arrive {
-      to { opacity: 1; transform: translateY(0); }
+    .b1 { animation-delay: 0.5s; }
+    .b2 { animation-delay: 1.5s; }
+    .b3 { animation-delay: 3.9s; }
+
+    .typing {
+      display: flex;
+      gap: 5px;
+      padding: 14px 16px;
+      background: #F4EEEA;
+      border-radius: 18px;
+      border-bottom-left-radius: 6px;
+      align-self: flex-start;
+      opacity: 0;
+      animation: typingShow 0.3s ease-out 2.6s forwards, typingHide 0.25s ease-in 3.7s forwards;
     }
+
+    .typing i {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(35, 35, 35, 0.4);
+      animation: pulse 1s infinite ease-in-out;
+    }
+
+    .typing i:nth-child(2) { animation-delay: 0.15s; }
+    .typing i:nth-child(3) { animation-delay: 0.3s; }
+
+    @keyframes arrive { to { opacity: 1; transform: translateY(0); } }
+    @keyframes typingShow { to { opacity: 1; } }
+    @keyframes typingHide { to { opacity: 0; height: 0; padding-top: 0; padding-bottom: 0; margin-top: -11px; } }
+    @keyframes pulse { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
 
     @media (prefers-reduced-motion: reduce) {
       .bubble { animation: none; opacity: 1; transform: none; }
+      .typing { display: none; }
     }
 
-    main { padding-bottom: 24px; }
+    /* ---------- Bands ---------- */
 
-    section { padding: 40px 0; border-top: 1px solid var(--line); }
+    .band { padding: 88px 0; }
+
+    .band.white { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+    .band.tint { background: var(--brand-tint); }
+
+    .band-head { max-width: 620px; margin-bottom: 46px; }
 
     h2 {
       font-family: 'Fraunces', Georgia, serif;
       font-weight: 500;
-      font-size: 1.5rem;
-      margin-bottom: 14px;
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
     }
 
-    p + p { margin-top: 12px; }
+    .band-head p { color: var(--ink-soft); font-size: 1.08rem; }
 
-    .muted { color: var(--ink-soft); }
+    /* ---------- Steps ---------- */
 
-    .notice {
-      background: var(--brand-tint);
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .step {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 30px 28px;
+    }
+
+    .step .icon {
+      width: 46px;
+      height: 46px;
       border-radius: 14px;
-      padding: 22px 24px;
-      font-size: 0.98rem;
+      background: var(--brand-tint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
     }
 
-    .notice strong { color: var(--brand); }
+    .step .icon svg { width: 23px; height: 23px; stroke: var(--brand); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
-    a.mail {
-      display: inline-block;
-      margin-top: 6px;
-      font-weight: 700;
+    .step h3 {
       font-size: 1.15rem;
-      color: var(--brand);
-      text-decoration: none;
-      border-bottom: 2px solid var(--brand-tint);
-      padding-bottom: 2px;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
-    a.mail:hover, a.mail:focus-visible { border-bottom-color: var(--brand); }
+    .step p { font-size: 0.98rem; color: var(--ink-soft); }
 
-    a:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
+    /* ---------- Messages ---------- */
+
+    .msg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+    }
+
+    .msg-card {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 30px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .msg-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .msg-card h3 svg { width: 20px; height: 20px; stroke: var(--brand); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+    .msg-card p { font-size: 0.98rem; color: var(--ink-soft); }
+
+    .msg-card p strong { color: var(--ink); }
+
+    /* ---------- Contact ---------- */
+
+    .contact { text-align: center; padding: 96px 0; }
+
+    .contact h2 { margin-bottom: 10px; }
+
+    .contact p { color: var(--ink-soft); margin-bottom: 26px; }
+
+    .mail-cta {
+      display: inline-block;
+      font-weight: 700;
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: #fff;
+      background: var(--brand);
+      text-decoration: none;
+      padding: 16px 34px;
+      border-radius: 999px;
+      box-shadow: 0 12px 30px rgba(237, 83, 112, 0.35);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .mail-cta:hover { background: var(--brand-deep); transform: translateY(-2px); }
+
+    /* ---------- Footer ---------- */
 
     footer {
-      border-top: 1px solid var(--line);
-      padding: 30px 0 44px;
-      font-size: 0.9rem;
-      color: var(--ink-soft);
-      text-align: center;
+      background: var(--footer);
+      color: rgba(255, 255, 255, 0.65);
+      padding: 54px 0;
+      font-size: 0.92rem;
+    }
+
+    footer .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    footer .wordmark { color: #fff; font-size: 1.3rem; }
+
+    footer .legal { text-align: right; }
+
+    footer a { color: rgba(255, 255, 255, 0.85); text-decoration: none; font-weight: 700; }
+
+    footer a:hover { color: #fff; }
+
+    /* ---------- Responsive ---------- */
+
+    @media (max-width: 960px) {
+      .hero .inner {
+        grid-template-columns: 1fr;
+        gap: 64px;
+        text-align: center;
+        padding-bottom: 88px;
+      }
+
+      .lede { margin-left: auto; margin-right: auto; }
+
+      .hero-meta { justify-content: center; }
+
+      .band-head { margin-left: auto; margin-right: auto; text-align: center; }
+    }
+
+    @media (max-width: 860px) {
+      .steps { grid-template-columns: 1fr; }
+      .msg-grid { grid-template-columns: 1fr; }
+      .band { padding: 70px 0; }
+    }
+
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      footer .inner { flex-direction: column; text-align: center; }
+      footer .legal { text-align: center; }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
 
-    <header class="hero">
-      <div class="wordmark">Chatty<span class="ful">Ful</span></div>
-      <p class="tagline">Talk to someone who gets it, right when you need to.</p>
-      <div class="chat" aria-hidden="true">
-        <div class="bubble them">I just need someone to talk to.</div>
-        <div class="bubble you">I'm here. What's going on?</div>
-      </div>
-    </header>
+  <nav>
+    <div class="inner">
+      <a class="wordmark" href="https://chattyful.com">Chatty<span class="ful">Ful</span></a>
+      <a class="nav-mail" href="mailto:support@chattyful.com">support@chattyful.com</a>
+    </div>
+  </nav>
 
-    <main>
-      <section>
-        <h2>What ChattyFul is</h2>
-        <p>ChattyFul is a peer-support chat app. When you need to talk, it matches you in real time with someone offering to listen and help. When you have room to give, you can be that someone for another person. Around the matching sits everything you'd expect from a modern chat app: direct messages, group conversations, friends, and profiles.</p>
-        <p class="muted">The ChattyFul app for iOS is coming soon, with Android to follow.</p>
-      </section>
-
-      <section>
-        <h2>Messages from ChattyFul</h2>
-        <div class="notice">
-          <p><strong>Text messages:</strong> when you create a ChattyFul account with your phone number or update it later, we send a one-time verification code by SMS to that number. Codes arrive only when you request them. We do not send marketing texts. Message and data rates may apply.</p>
-          <p><strong>Email:</strong> account emails such as verification codes, password resets, and security alerts come from noreply@chattyful.com.</p>
+  <header class="hero">
+    <div class="inner">
+      <div>
+        <span class="eyebrow">Peer support, person to person</span>
+        <h1>Talk to someone who gets it.</h1>
+        <p class="lede">ChattyFul matches people who need to talk with people ready to listen, in real time. Say what's on your mind and get a real conversation back, right when you need it.</p>
+        <div class="hero-meta">
+          <span class="store-pill">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            Coming soon to the App Store
+          </span>
+          <span class="hero-note">Android to follow</span>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <h2>Contact</h2>
-        <p>Questions, feedback, or trouble with your account? We read everything.</p>
-        <a class="mail" href="mailto:support@chattyful.com">support@chattyful.com</a>
-      </section>
-    </main>
+      <div class="phone-wrap">
+        <div class="phone" aria-hidden="true">
+          <div class="phone-top">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C7 3 3 6.6 3 11c0 2.5 1.3 4.7 3.3 6.2V21l3.6-1.9c.7.1 1.4.2 2.1.2 5 0 9-3.6 9-8s-4-8.3-9-8.3z"/></svg>
+            <span class="title">Support Chat</span>
+          </div>
+          <div class="screen">
+            <span class="sys">You're connected</span>
+            <div class="bubble them b1">I just need someone to talk to.</div>
+            <div class="bubble you b2">I'm here. What's going on?</div>
+            <div class="typing"><i></i><i></i><i></i></div>
+            <div class="bubble them b3">Rough week. Can we chat for a bit?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <footer>
-      <p>ChattyFul is operated by Happy World LLC.</p>
-      <p>&copy; 2026 Happy World LLC. All rights reserved.</p>
-    </footer>
+  <section class="band white">
+    <div class="inner">
+      <div class="band-head">
+        <h2>How ChattyFul works</h2>
+        <p>No feeds, no performing, no waiting rooms. Just people showing up for each other.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5c0 4.1-4 7.5-9 7.5-.9 0-1.8-.1-2.6-.3L4 21l1.4-3.4C3.9 16.2 3 14 3 11.5 3 7.4 7 4 12 4s9 3.4 9 7.5z"/></svg></div>
+          <h3>Say you need to talk</h3>
+          <p>Tap Help Me, add a topic if you want, and you're in the queue in seconds. Share as much or as little as you like.</p>
+        </div>
+        <div class="step">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg></div>
+          <h3>Get matched live</h3>
+          <p>Someone offering to help joins you in a private chat, usually within moments. Real time, real person.</p>
+        </div>
+        <div class="step">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.5 5.5-4.5s4.9 1.5 5.5 4.5"/><circle cx="17" cy="9" r="2.6"/><path d="M15.8 14.7c2.4.2 4.2 1.6 4.7 4.3"/></svg></div>
+          <h3>Keep your people</h3>
+          <p>Great conversations don't have to end. Add friends, send direct messages, and build group chats.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </div>
+  <section class="band tint">
+    <div class="inner">
+      <div class="band-head">
+        <h2>Messages from ChattyFul</h2>
+        <p>We only message you about your account. Here's exactly what to expect.</p>
+      </div>
+      <div class="msg-grid">
+        <div class="msg-card">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>Text messages</h3>
+          <p>When you create a ChattyFul account with your phone number, or update it later, we send a <strong>one-time verification code by SMS</strong> to that number. Codes arrive only when you request them. We do not send marketing texts. Message and data rates may apply.</p>
+        </div>
+        <div class="msg-card">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>Email</h3>
+          <p>Account emails such as <strong>verification codes, password resets, and security alerts</strong> come from noreply@chattyful.com. If something about your account changes, that's where we'll tell you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="inner">
+      <h2>Questions? Talk to us.</h2>
+      <p>Feedback, account help, anything at all. We read everything.</p>
+      <a class="mail-cta" href="mailto:support@chattyful.com">support@chattyful.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="inner">
+      <span class="wordmark">Chatty<span class="ful">Ful</span></span>
+      <div class="legal">
+        <p>ChattyFul is operated by Happy World LLC.</p>
+        <p>&copy; 2026 Happy World LLC. All rights reserved. · <a href="mailto:support@chattyful.com">support@chattyful.com</a></p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
