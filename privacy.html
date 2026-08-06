@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy · ChattyFul</title>
+  <meta name="description" content="How ChattyFul collects, uses, stores, and protects your information. Operated by Happy World LLC.">
+  <meta name="theme-color" content="#FBF7F4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23ED5370' d='M32 6C17.6 6 6 16.7 6 30c0 7.6 3.9 14.4 10 18.8V58l10.3-5.4c1.8.4 3.7.6 5.7.6 14.4 0 26-10.7 26-24S46.4 6 32 6z'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #FBF7F4;
+      --ink: #232323;
+      --ink-soft: rgba(35, 35, 35, 0.62);
+      --brand: #ED5370;
+      --brand-deep: #D13B58;
+      --brand-tint: #FCE9ED;
+      --card: #FFFFFF;
+      --line: rgba(35, 35, 35, 0.10);
+      --footer: #241A1F;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Karla', 'Segoe UI', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .inner { max-width: 780px; margin: 0 auto; padding: 0 28px; }
+
+    a { color: var(--brand-deep); }
+    a:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+
+    nav { padding: 22px 0; border-bottom: 1px solid var(--line); }
+    nav .inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; max-width: 1120px; }
+
+    .wordmark {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: 1.55rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .wordmark .ful { color: var(--brand); }
+
+    .nav-links { display: flex; gap: 20px; font-size: 0.95rem; font-weight: 700; }
+    .nav-links a { color: var(--ink); text-decoration: none; }
+    .nav-links a:hover { color: var(--brand); }
+
+    header.page { padding: 64px 0 30px; }
+
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.1rem, 4.5vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+
+    .dates { color: var(--ink-soft); font-size: 0.95rem; }
+
+    .operator {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 24px;
+      margin: 30px 0 8px;
+      font-size: 0.98rem;
+    }
+
+    .operator strong { display: block; margin-bottom: 4px; }
+
+    main { padding-bottom: 80px; }
+
+    section { margin-top: 44px; }
+
+    h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 500;
+      font-size: 1.45rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+    }
+
+    h3 { font-size: 1.05rem; font-weight: 700; margin: 22px 0 8px; }
+
+    p { margin-bottom: 14px; }
+
+    ul { margin: 0 0 16px 22px; }
+    li { margin-bottom: 8px; }
+
+    .callout {
+      background: var(--brand-tint);
+      border-radius: 16px;
+      padding: 24px 26px;
+      margin: 20px 0;
+    }
+
+    .callout h2 { margin-bottom: 10px; }
+    .callout p:last-child, .callout ul:last-child { margin-bottom: 0; }
+
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 26px;
+      margin-top: 34px;
+    }
+
+    .toc h2 { font-size: 1.05rem; font-family: 'Karla', sans-serif; font-weight: 700; margin-bottom: 10px; }
+    .toc ol { margin: 0 0 0 20px; }
+    .toc li { margin-bottom: 4px; font-size: 0.96rem; }
+
+    footer {
+      background: var(--footer);
+      color: rgba(255, 255, 255, 0.65);
+      padding: 44px 0;
+      font-size: 0.92rem;
+    }
+
+    footer .inner { max-width: 1120px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    footer .wordmark { color: #fff; font-size: 1.3rem; }
+    footer .legal { text-align: right; }
+    footer a { color: rgba(255, 255, 255, 0.85); text-decoration: none; font-weight: 700; }
+    footer a:hover { color: #fff; }
+
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      footer .inner { flex-direction: column; text-align: center; }
+      footer .legal { text-align: center; }
+      .nav-links { gap: 14px; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="inner">
+      <a class="wordmark" href="https://chattyful.com">Chatty<span class="ful">Ful</span></a>
+      <div class="nav-links">
+        <a href="https://chattyful.com/terms.html">Terms</a>
+        <a href="mailto:support@chattyful.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page">
+    <div class="inner">
+      <h1>Privacy Policy</h1>
+      <p class="dates">Effective 6 August 2026 · Last updated 6 August 2026</p>
+
+      <div class="operator">
+        <strong>Who operates ChattyFul</strong>
+        ChattyFul is operated by Happy World LLC, a Texas limited liability company owned and managed by Youssef F Najjarine. Questions about this policy go to <a href="mailto:support@chattyful.com">support@chattyful.com</a>.
+      </div>
+
+      <div class="toc">
+        <h2>What's in this policy</h2>
+        <ol>
+          <li><a href="#collect">Information we collect</a></li>
+          <li><a href="#use">How we use it</a></li>
+          <li><a href="#sms">Text messages (SMS)</a></li>
+          <li><a href="#push">Push notifications</a></li>
+          <li><a href="#messages">Your conversations and who can read them</a></li>
+          <li><a href="#reports">Reporting and moderation</a></li>
+          <li><a href="#sharing">Sharing and service providers</a></li>
+          <li><a href="#retention">How long we keep things</a></li>
+          <li><a href="#rights">Your choices and rights</a></li>
+          <li><a href="#age">Age requirement</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#state">State privacy notices</a></li>
+          <li><a href="#changes">Changes to this policy</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="inner">
+
+      <section id="collect">
+        <h2>1. Information we collect</h2>
+
+        <h3>Information you give us</h3>
+        <ul>
+          <li><strong>Phone number</strong> — if you create or verify your account with a phone number, or change it later.</li>
+          <li><strong>Email address</strong> — if you create or verify your account with an email address, or change it later.</li>
+          <li><strong>Name and username</strong> you choose for your account.</li>
+          <li><strong>Password</strong>, which we store only as a hash and never in readable form.</li>
+          <li><strong>Profile details</strong> you add, such as a bio, a profile photo, and a background photo.</li>
+        </ul>
+
+        <h3>Information created when you use ChattyFul</h3>
+        <ul>
+          <li><strong>Messages you send</strong>, including text, photos, and voice notes.</li>
+          <li><strong>Reactions</strong> you add to messages.</li>
+          <li><strong>Conversation and connection data</strong> — the chats you belong to, the people you are matched with, friend requests, and direct messages.</li>
+          <li><strong>Reports you submit</strong>, including the reason you write and a copy of the message you reported.</li>
+          <li><strong>Device and technical data</strong> — device type, operating system, app version, and a push notification token if you enable notifications.</li>
+          <li><strong>Usage data</strong> such as sign-in times and general activity needed to run the service.</li>
+        </ul>
+
+        <p>We do not ask for and do not want financial information, government identification numbers, or precise location data.</p>
+      </section>
+
+      <section id="use">
+        <h2>2. How we use it</h2>
+        <ul>
+          <li>To create your account and sign you in.</li>
+          <li>To verify your phone number or email address, and to let you reset a forgotten password.</li>
+          <li>To match you with someone to talk to and deliver messages between you.</li>
+          <li>To send you account and security notifications.</li>
+          <li>To investigate reports, enforce our Terms, and keep people safe.</li>
+          <li>To fix problems, keep the service running, and improve how it works.</li>
+          <li>To meet legal obligations and respond to lawful requests.</li>
+        </ul>
+        <p>We do not use your conversations to advertise to you, and we do not sell your personal information.</p>
+      </section>
+
+      <section id="sms" class="callout">
+        <h2>3. Text messages (SMS)</h2>
+        <p>If you give us your phone number, you consent to receive automated account text messages from ChattyFul at that number. These are transactional messages only. We send:</p>
+        <ul>
+          <li>A one-time code to verify your phone number when you sign up.</li>
+          <li>A one-time code to reset your password.</li>
+          <li>A one-time code to confirm a change to your phone number.</li>
+          <li>A confirmation once your account is verified.</li>
+          <li>A security alert if your phone number is changed.</li>
+        </ul>
+        <p>Every one of these is triggered by something you do in the app. Message frequency depends on your activity and is typically only a few messages per account. Message and data rates may apply. Reply STOP to any message to opt out, or HELP for help. If you opt out you can still use ChattyFul with email, but we will not be able to send you phone verification or phone-based password resets.</p>
+        <p><strong>We do not send marketing or promotional text messages, and we do not share or sell mobile information collected for SMS — including your phone number and your consent to be messaged — with or to third parties for their own marketing purposes.</strong> Your phone number is shared only with the messaging provider that delivers these messages on our behalf.</p>
+      </section>
+
+      <section id="push">
+        <h2>4. Push notifications</h2>
+        <p>If you allow notifications, your device gives us a push token so we can alert you about new messages, matches, and friend requests. You can turn notifications off at any time in your device settings, which stops the alerts without deleting your account.</p>
+      </section>
+
+      <section id="messages">
+        <h2>5. Your conversations and who can read them</h2>
+        <p>We want to be exact about this, because it matters.</p>
+        <p>Message text, photos, and voice notes are <strong>encrypted while stored on our systems</strong>. That protects your conversations if a database or backup were ever exposed. ChattyFul is <strong>not end-to-end encrypted</strong>: we hold the key, which means it is technically possible for us to read message content.</p>
+        <p>In practice we access message content only when there is a reason to — investigating a report, responding to a safety concern, debugging a specific fault you have asked us for help with, or complying with a valid legal request. We do not read conversations for curiosity, for advertising, or to train any product on them.</p>
+        <p>Please keep this in mind when deciding what to share. If you need a channel that nobody but the other person can read, ChattyFul is not that channel.</p>
+      </section>
+
+      <section id="reports">
+        <h2>6. Reporting and moderation</h2>
+        <p>You can report a message from inside the app. When you do, we store a copy of the reported message and the reason you gave, so the report can be reviewed even if the message is later deleted. That copy is kept with the report, not in the conversation.</p>
+        <p>We use reports to enforce our Terms. That can mean warning, restricting, or removing an account. We may also act without a report if we become aware of serious harm.</p>
+      </section>
+
+      <section id="sharing">
+        <h2>7. Sharing and service providers</h2>
+        <p>We do not sell or rent your personal information, and we do not share it for anyone else's advertising.</p>
+        <p>We share limited information with the companies that help us run ChattyFul, and only what each one needs:</p>
+        <ul>
+          <li><strong>Text message delivery</strong> — your phone number and the message body, to deliver verification and security texts. We currently use Twilio.</li>
+          <li><strong>Email delivery</strong> — your email address and the message body, to deliver account emails.</li>
+          <li><strong>Cloud hosting and databases</strong> — where the service and its data run. We currently use Microsoft Azure.</li>
+          <li><strong>Push notification delivery</strong> — your push token and the alert text.</li>
+        </ul>
+        <p>We may also disclose information when we believe in good faith that it is necessary to comply with a law or valid legal process, to enforce our Terms, or to protect the safety of a person or the public. If ChattyFul is ever sold or merged, your information may transfer as part of that, and we will say so before it takes effect.</p>
+      </section>
+
+      <section id="retention">
+        <h2>8. How long we keep things</h2>
+        <p>We keep your account information for as long as your account exists.</p>
+        <p>Deleting a message removes it from the conversation for everyone in that chat. A copy may remain in our systems for a limited period afterwards, including in routine backups, and a reported message is kept with its report so the report can still be reviewed.</p>
+        <p>When you delete your account we remove your profile and account details. Messages you sent may remain visible to the other people in a conversation, since those conversations are theirs as well, and reported content is kept for as long as needed to handle the report and to enforce our Terms. Backups age out on their own schedule.</p>
+      </section>
+
+      <section id="rights">
+        <h2>9. Your choices and rights</h2>
+        <ul>
+          <li><strong>See and correct your information</strong> — your profile details are editable in the app, and you can ask us for a copy of what we hold.</li>
+          <li><strong>Delete your account</strong> — you can delete your account, or ask us to do it for you.</li>
+          <li><strong>Stop text messages</strong> — reply STOP to any ChattyFul text.</li>
+          <li><strong>Stop push notifications</strong> — turn them off in your device settings.</li>
+        </ul>
+        <p>To make a request, email <a href="mailto:support@chattyful.com">support@chattyful.com</a> from the address on your account, or contact us from inside the app. We will not treat you differently for exercising any of these rights.</p>
+      </section>
+
+      <section id="age">
+        <h2>10. Age requirement</h2>
+        <p>ChattyFul is for adults. You must be 18 or older to create an account. We do not knowingly collect personal information from anyone under 18. If we learn that an account belongs to someone under 18, we will close it and delete the information associated with it. If you believe a minor has created an account, tell us at <a href="mailto:support@chattyful.com">support@chattyful.com</a> and we will act on it.</p>
+      </section>
+
+      <section id="security">
+        <h2>11. Security</h2>
+        <p>Traffic between the app and our servers is encrypted in transit. Message content, photos, and voice notes are encrypted where they are stored. Passwords are stored only as hashes. Access to production systems is limited to those who need it to operate the service.</p>
+        <p>No service can promise perfect security. If a breach affects your information, we will notify you and any authority we are required to notify, as promptly as we reasonably can.</p>
+      </section>
+
+      <section id="state">
+        <h2>12. State privacy notices</h2>
+        <p><strong>Texas.</strong> Under the Texas Data Privacy and Security Act, Texas residents may request access to, correction of, or deletion of their personal data, and may request a portable copy. We do not sell personal data, do not use it for targeted advertising, and do not profile people in ways that produce legal or similarly significant effects.</p>
+        <p><strong>California.</strong> California residents have comparable rights of access, correction, deletion, and portability. We do not sell or share personal information as those terms are defined under California law.</p>
+        <p>To exercise any of these rights, email <a href="mailto:support@chattyful.com">support@chattyful.com</a>. If we decline a request, you may ask us to reconsider by replying to our response.</p>
+      </section>
+
+      <section id="changes">
+        <h2>13. Changes to this policy</h2>
+        <p>We may update this policy as ChattyFul changes. When we do, we will update the date at the top of this page, and for meaningful changes we will tell you in the app or by email before they take effect. Continuing to use ChattyFul after a change means you accept the updated policy.</p>
+      </section>
+
+      <section id="contact">
+        <h2>14. Contact</h2>
+        <p>Happy World LLC<br>
+        ChattyFul<br>
+        <a href="mailto:support@chattyful.com">support@chattyful.com</a></p>
+        <p>See also our <a href="https://chattyful.com/terms.html">Terms of Service</a>.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="inner">
+      <span class="wordmark">Chatty<span class="ful">Ful</span></span>
+      <div class="legal">
+        <p>ChattyFul is operated by Happy World LLC, a Texas limited liability company owned and managed by Youssef F Najjarine.</p>
+        <p>&copy; 2026 Happy World LLC. All rights reserved. · <a href="https://chattyful.com/terms.html">Terms</a> · <a href="mailto:support@chattyful.com">support@chattyful.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

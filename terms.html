@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service · ChattyFul</title>
+  <meta name="description" content="The terms you agree to when you use ChattyFul, a peer-support chat app operated by Happy World LLC.">
+  <meta name="theme-color" content="#FBF7F4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23ED5370' d='M32 6C17.6 6 6 16.7 6 30c0 7.6 3.9 14.4 10 18.8V58l10.3-5.4c1.8.4 3.7.6 5.7.6 14.4 0 26-10.7 26-24S46.4 6 32 6z'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #FBF7F4;
+      --ink: #232323;
+      --ink-soft: rgba(35, 35, 35, 0.62);
+      --brand: #ED5370;
+      --brand-deep: #D13B58;
+      --brand-tint: #FCE9ED;
+      --card: #FFFFFF;
+      --line: rgba(35, 35, 35, 0.10);
+      --footer: #241A1F;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Karla', 'Segoe UI', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .inner { max-width: 780px; margin: 0 auto; padding: 0 28px; }
+
+    a { color: var(--brand-deep); }
+    a:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+
+    nav { padding: 22px 0; border-bottom: 1px solid var(--line); }
+    nav .inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; max-width: 1120px; }
+
+    .wordmark {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: 1.55rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .wordmark .ful { color: var(--brand); }
+
+    .nav-links { display: flex; gap: 20px; font-size: 0.95rem; font-weight: 700; }
+    .nav-links a { color: var(--ink); text-decoration: none; }
+    .nav-links a:hover { color: var(--brand); }
+
+    header.page { padding: 64px 0 30px; }
+
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.1rem, 4.5vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+
+    .dates { color: var(--ink-soft); font-size: 0.95rem; }
+
+    .operator {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 24px;
+      margin: 30px 0 8px;
+      font-size: 0.98rem;
+    }
+
+    .operator strong { display: block; margin-bottom: 4px; }
+
+    main { padding-bottom: 80px; }
+
+    section { margin-top: 44px; }
+
+    h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 500;
+      font-size: 1.45rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+    }
+
+    h3 { font-size: 1.05rem; font-weight: 700; margin: 22px 0 8px; }
+
+    p { margin-bottom: 14px; }
+
+    ul { margin: 0 0 16px 22px; }
+    li { margin-bottom: 8px; }
+
+    .callout {
+      background: var(--brand-tint);
+      border-radius: 16px;
+      padding: 24px 26px;
+      margin: 20px 0;
+    }
+
+    .callout h2 { margin-bottom: 10px; }
+    .callout p:last-child, .callout ul:last-child { margin-bottom: 0; }
+
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 26px;
+      margin-top: 34px;
+    }
+
+    .toc h2 { font-size: 1.05rem; font-family: 'Karla', sans-serif; font-weight: 700; margin-bottom: 10px; }
+    .toc ol { margin: 0 0 0 20px; }
+    .toc li { margin-bottom: 4px; font-size: 0.96rem; }
+
+    footer {
+      background: var(--footer);
+      color: rgba(255, 255, 255, 0.65);
+      padding: 44px 0;
+      font-size: 0.92rem;
+    }
+
+    footer .inner { max-width: 1120px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    footer .wordmark { color: #fff; font-size: 1.3rem; }
+    footer .legal { text-align: right; }
+    footer a { color: rgba(255, 255, 255, 0.85); text-decoration: none; font-weight: 700; }
+    footer a:hover { color: #fff; }
+
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      footer .inner { flex-direction: column; text-align: center; }
+      footer .legal { text-align: center; }
+      .nav-links { gap: 14px; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="inner">
+      <a class="wordmark" href="https://chattyful.com">Chatty<span class="ful">Ful</span></a>
+      <div class="nav-links">
+        <a href="https://chattyful.com/privacy.html">Privacy</a>
+        <a href="mailto:support@chattyful.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page">
+    <div class="inner">
+      <h1>Terms of Service</h1>
+      <p class="dates">Effective 6 August 2026 · Last updated 6 August 2026</p>
+
+      <div class="operator">
+        <strong>Who operates ChattyFul</strong>
+        ChattyFul is operated by Happy World LLC, a Texas limited liability company owned and managed by Youssef F Najjarine. In these Terms, "we", "us", and "ChattyFul" mean Happy World LLC. "You" means the person using the app.
+      </div>
+
+      <div class="toc">
+        <h2>What's in these terms</h2>
+        <ol>
+          <li><a href="#accept">Accepting these terms</a></li>
+          <li><a href="#what">What ChattyFul is</a></li>
+          <li><a href="#crisis">Crisis situations and emergencies</a></li>
+          <li><a href="#age">Age requirement</a></li>
+          <li><a href="#account">Your account</a></li>
+          <li><a href="#rules">How to behave here</a></li>
+          <li><a href="#content">Your content</a></li>
+          <li><a href="#sms">Text messages and notifications</a></li>
+          <li><a href="#reports">Reporting, moderation, and enforcement</a></li>
+          <li><a href="#termination">Ending your account</a></li>
+          <li><a href="#disclaimer">Disclaimers</a></li>
+          <li><a href="#liability">Limitation of liability</a></li>
+          <li><a href="#indemnity">Your responsibility to us</a></li>
+          <li><a href="#law">Governing law and disputes</a></li>
+          <li><a href="#changes">Changes to these terms</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="inner">
+
+      <section id="accept">
+        <h2>1. Accepting these terms</h2>
+        <p>By creating an account or using ChattyFul, you agree to these Terms and to our <a href="https://chattyful.com/privacy.html">Privacy Policy</a>. If you do not agree with them, please do not use ChattyFul.</p>
+      </section>
+
+      <section id="what">
+        <h2>2. What ChattyFul is</h2>
+        <p>ChattyFul is a peer-support chat app. It connects people who want to talk with people who are willing to listen. Conversations happen between ordinary people.</p>
+        <p>The people you talk to on ChattyFul are <strong>not</strong> therapists, counsellors, doctors, social workers, or crisis responders, and we do not vet, train, license, certify, or supervise them. Nothing said on ChattyFul is medical, psychological, or professional advice. ChattyFul is not a substitute for professional care, and it is not a crisis service.</p>
+      </section>
+
+      <section id="crisis" class="callout">
+        <h2>3. Crisis situations and emergencies</h2>
+        <p><strong>ChattyFul is not an emergency service and is not monitored for emergencies.</strong> Nobody is watching conversations in real time, and there is no guarantee that anyone will see a message quickly or at all.</p>
+        <p>If you or someone else is in immediate danger, contact your local emergency number right away. In the United States that is 911. If you are having thoughts of suicide or self-harm, or you are worried about someone who is, you can reach the 988 Suicide &amp; Crisis Lifeline by calling or texting <strong>988</strong> in the United States, at any hour.</p>
+        <p>Please do not rely on ChattyFul for urgent help. Reach a person or service who can actually respond.</p>
+      </section>
+
+      <section id="age">
+        <h2>4. Age requirement</h2>
+        <p>You must be <strong>18 years of age or older</strong> to create an account or use ChattyFul. By creating an account you confirm that you are 18 or older.</p>
+        <p>ChattyFul is not directed at children, and we do not knowingly allow anyone under 18 to use it. If we learn that an account belongs to someone under 18, we will close it. If you believe a minor is using ChattyFul, tell us at <a href="mailto:support@chattyful.com">support@chattyful.com</a>.</p>
+      </section>
+
+      <section id="account">
+        <h2>5. Your account</h2>
+        <ul>
+          <li>Give accurate information when you sign up, and keep it current.</li>
+          <li>Your account is yours alone. Do not share it, sell it, or let someone else use it.</li>
+          <li>Keep your password to yourself, and tell us promptly if you think someone else has access.</li>
+          <li>You are responsible for what happens under your account.</li>
+        </ul>
+      </section>
+
+      <section id="rules">
+        <h2>6. How to behave here</h2>
+        <p>People come to ChattyFul at difficult moments. Treat them accordingly. You agree not to:</p>
+        <ul>
+          <li>Harass, bully, threaten, intimidate, or abuse anyone.</li>
+          <li>Post hateful content, or attack people over race, ethnicity, religion, sex, gender, sexual orientation, disability, national origin, age, or any similar characteristic.</li>
+          <li>Send sexual content, solicit anyone sexually, or use ChattyFul for sexual gratification.</li>
+          <li>Encourage suicide, self-harm, disordered eating, or violence toward anyone.</li>
+          <li>Pretend to be someone else, or hold yourself out as a licensed professional when you are not.</li>
+          <li>Share anyone's private information, including your own, in a way that puts a person at risk.</li>
+          <li>Advertise, solicit, recruit, sell, scam, or promote anything.</li>
+          <li>Record, screenshot, republish, or share someone else's conversation without their consent.</li>
+          <li>Use bots, scrapers, or automated tools against the service, or try to break, overload, reverse engineer, or gain unauthorised access to any part of it.</li>
+          <li>Break the law, or use ChattyFul to help someone else break it.</li>
+        </ul>
+      </section>
+
+      <section id="content">
+        <h2>7. Your content</h2>
+        <p>What you write stays yours. You keep ownership of your messages, photos, voice notes, and profile content.</p>
+        <p>So that we can operate the app, you give us a limited, non-exclusive, worldwide, royalty-free licence to host, store, encrypt, transmit, and display your content for the purpose of running ChattyFul and delivering your messages to the people you send them to. That licence exists only to make the service work. It does not let us publish your content, sell it, or use it to advertise. It ends when your content is deleted, apart from copies kept as described in our Privacy Policy.</p>
+        <p>You are responsible for what you post, and you confirm you have the right to post it.</p>
+      </section>
+
+      <section id="sms">
+        <h2>8. Text messages and notifications</h2>
+        <p>If you give us your phone number, you agree to receive automated account text messages from ChattyFul at that number: one-time verification codes at signup, password reset codes, phone-change codes, a confirmation once your account is verified, and a security alert if your number is changed. Each is triggered by something you do in the app.</p>
+        <p>We do not send marketing texts. Message frequency depends on your activity. <strong>Message and data rates may apply.</strong> Reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for help. Consent to receive these messages is not a condition of any purchase. Carriers are not liable for delayed or undelivered messages.</p>
+        <p>If you turn on push notifications, we will use them to tell you about new messages, matches, and friend requests. You can turn them off in your device settings at any time.</p>
+      </section>
+
+      <section id="reports">
+        <h2>9. Reporting, moderation, and enforcement</h2>
+        <p>You can report a message from inside the app, and you can block another user. When you report a message, we keep a copy of it with your report so it can be reviewed even if the message is later deleted.</p>
+        <p>We are not obliged to monitor conversations, and we do not monitor them in real time. When something is reported to us, or otherwise comes to our attention, we may review it and take action: a warning, removal of content, restriction of features, or suspension or closure of an account. We may act immediately and without notice where we believe someone is at risk or the law requires it.</p>
+      </section>
+
+      <section id="termination">
+        <h2>10. Ending your account</h2>
+        <p>You can delete your account at any time from inside the app, or by writing to <a href="mailto:support@chattyful.com">support@chattyful.com</a>. What happens to your information afterwards is described in our <a href="https://chattyful.com/privacy.html">Privacy Policy</a>.</p>
+        <p>We may suspend or close your account if you break these Terms, if we are required to, or if we reasonably believe it is necessary to protect someone. We may also stop offering ChattyFul, in which case we will give reasonable notice where we can.</p>
+      </section>
+
+      <section id="disclaimer">
+        <h2>11. Disclaimers</h2>
+        <p>ChattyFul is provided "as is" and "as available", without warranties of any kind, whether express or implied, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement, to the fullest extent the law allows.</p>
+        <p>We do not promise that the service will be uninterrupted, timely, secure, or error-free, that messages will always be delivered, or that you will be matched with anyone. We do not control what other people say, and we are not responsible for it. Anything you do with information you receive on ChattyFul is your decision.</p>
+      </section>
+
+      <section id="liability">
+        <h2>12. Limitation of liability</h2>
+        <p>To the fullest extent permitted by law, Happy World LLC and its owner, officers, and agents will not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for lost profits, lost data, or loss of goodwill, arising out of or relating to your use of ChattyFul, whatever the legal theory and even if we have been advised such damages are possible.</p>
+        <p>To the fullest extent permitted by law, our total liability for all claims relating to ChattyFul is limited to the greater of the amount you paid us in the twelve months before the claim arose, or one hundred United States dollars.</p>
+        <p>Some jurisdictions do not allow certain limitations, so parts of this section may not apply to you. Nothing here limits liability that cannot lawfully be limited.</p>
+      </section>
+
+      <section id="indemnity">
+        <h2>13. Your responsibility to us</h2>
+        <p>You agree to indemnify and hold harmless Happy World LLC and its owner, officers, and agents from any claim, loss, liability, or expense, including reasonable legal fees, arising from your content, your use of ChattyFul, or your breach of these Terms or of the law.</p>
+      </section>
+
+      <section id="law">
+        <h2>14. Governing law and disputes</h2>
+        <p>These Terms are governed by the laws of the State of Texas, without regard to its conflict of laws rules. You and we agree that any dispute arising out of or relating to ChattyFul or these Terms will be brought exclusively in the state or federal courts located in Dallas County, Texas, and you consent to the jurisdiction of those courts. This does not prevent either of us from seeking urgent injunctive relief where it is available, and it does not affect any right you have to bring a claim in a small claims court.</p>
+        <p>Before starting a formal dispute, please write to <a href="mailto:support@chattyful.com">support@chattyful.com</a> and give us a chance to resolve it.</p>
+      </section>
+
+      <section id="changes">
+        <h2>15. Changes to these terms</h2>
+        <p>We may update these Terms as ChattyFul changes. When we do, we will update the date at the top of this page, and for meaningful changes we will tell you in the app or by email before they take effect. If you keep using ChattyFul after a change, you accept the updated Terms. If you do not accept them, you can delete your account.</p>
+      </section>
+
+      <section id="contact">
+        <h2>16. Contact</h2>
+        <p>Happy World LLC<br>
+        ChattyFul<br>
+        <a href="mailto:support@chattyful.com">support@chattyful.com</a></p>
+        <p>See also our <a href="https://chattyful.com/privacy.html">Privacy Policy</a>.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="inner">
+      <span class="wordmark">Chatty<span class="ful">Ful</span></span>
+      <div class="legal">
+        <p>ChattyFul is operated by Happy World LLC, a Texas limited liability company owned and managed by Youssef F Najjarine.</p>
+        <p>&copy; 2026 Happy World LLC. All rights reserved. · <a href="https://chattyful.com/privacy.html">Privacy</a> · <a href="mailto:support@chattyful.com">support@chattyful.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
