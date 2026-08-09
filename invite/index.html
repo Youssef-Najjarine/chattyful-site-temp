@@ -217,7 +217,7 @@
         <h1>You're invited to a chat on ChattyFul.</h1>
         <p>Someone wants you in their conversation. Open this link on your phone with the ChattyFul app installed and you'll be taken straight there.</p>
         <a class="open-cta" id="openApp" href="chattyful://invite">Open ChattyFul</a>
-        <p class="invite-note">Don't have the app yet? ChattyFul is coming soon to the App Store, with Android to follow. Keep this link handy and tap it again once the app is installed.</p>
+        <p class="invite-note" id="inviteNote">Don't have the app yet? ChattyFul is coming soon to the App Store, with Android to follow. Keep this link handy and tap it again once the app is installed.</p>
       </div>
     </div>
   </main>
@@ -236,7 +236,22 @@
     (function() {
       var query = window.location.search || '';
       var openLink = document.getElementById('openApp');
+      var inviteNote = document.getElementById('inviteNote');
+      var fallbackTimer = null;
       openLink.setAttribute('href', 'chattyful://invite' + query);
+      openLink.addEventListener('click', function() {
+        if (fallbackTimer) clearTimeout(fallbackTimer);
+        fallbackTimer = setTimeout(function() {
+          if (document.hidden) return;
+          inviteNote.textContent = 'It looks like ChattyFul isn\u2019t installed on this device yet. The app is coming soon to the App Store and Google Play. Keep this link handy and tap it again once you\u2019ve installed it.';
+        }, 1600);
+      });
+      document.addEventListener('visibilitychange', function() {
+        if (document.hidden && fallbackTimer) {
+          clearTimeout(fallbackTimer);
+          fallbackTimer = null;
+        }
+      });
     })();
   </script>
 
