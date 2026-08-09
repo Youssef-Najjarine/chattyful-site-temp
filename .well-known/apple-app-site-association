@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["H5WL45Y8TQ.com.chattyful.app"],
+        "components": [
+          { "/": "/invite" },
+          { "/": "/invite/*" }
+        ]
+      }
+    ]
+  }
+}
